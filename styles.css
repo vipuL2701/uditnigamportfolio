@@ -1,0 +1,182 @@
+/* Define color variables for light mode */
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #333;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --background-color: #333;
+  --text-color: #fff;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Add the rest of your styles here */
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+} */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+} */
+
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.theme-switch {
+  display: flex;
+  margin-right: zero;
+}
+
+section {
+  padding: 50px 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Add colorful gradients */
+#about {
+  background: linear-gradient(135deg, #ff8a65, #ffd54f);
+  color: #fff;
+  padding: 50px 0;
+}
+
+#projects {
+  background: linear-gradient(135deg, #90caf9, #64b5f6);
+  color: #fff;
+  padding: 50px 0;
+}
+
+/* Add animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ???????????????????????????????????? */
+
+
+.theme-switch {
+  position: relative;
+  margin-right: 20px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: background-color 0.4s;
+}
+
+.theme-switch .switch::before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.theme-switch input:checked + .switch {
+  background-color: #2196F3;
+}
+
+.theme-switch input:checked + .switch::before {
+  transform: translateX(20px);
+}
